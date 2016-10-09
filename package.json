@@ -36,6 +36,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
+    "postpush": "chmod +x ./bin/postpush.sh && ./bin/postpush.sh",
     "build": "webpack",
     "deploy": "surge -p public -d getbem.com",
     "lint": "xo",
@@ -50,5 +51,8 @@
     "ignores": [
       "public/**"
     ]
+  },
+  "devDependencies": {
+    "husky": "^0.11.9"
   }
 }
